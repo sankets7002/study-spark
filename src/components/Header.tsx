@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { GraduationCap } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -25,11 +26,11 @@ const Header = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="hidden sm:inline-flex">
-            Sign In
+          <Button asChild variant="ghost" className="hidden sm:inline-flex">
+            <Link to="/auth/login">Sign In</Link>
           </Button>
-          <Button variant="default">
-            Get Started
+          <Button asChild variant="default">
+            <Link to="/auth/register">Get Started</Link>
           </Button>
         </div>
       </nav>
